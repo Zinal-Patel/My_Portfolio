@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Meow+Script&family=Montserrat&family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    /*  'root' is a psuedo class that refers to the top most element of the parent-child heirarchy. In the html file its usually the HTML tag itslf. If there are other files, it refers to different element */
+
+    --header-height: 3rem;
+
+    /* hsl stands for hue, saturation and lightness. Hue is choosing red, green or bljue. saturation is adding the shade of grey into the color chosen and lightness is as the name suggests, how light or dark we want the color to be (0% being black 100% being white).  */
+
+    /* declaring colors as variables */
+    --first-color: hsl(271, 69%, 61%); /*#6e57e0*/
+    --second-color: hsl(250, 69%, 61%);
+    --color-alt: hsl(250, 57%, 53%);
+    --color-lighter: hsl(250, 92%, 85%);
+    --title-color: hsl(250, 8%, 15%);
+    --text-color: hsl(250, 8%, 45%);
+    --text-color-light :hsl(250, 8%, 65%);
+    --input-color: hsl(250, 70%, 96%);
+    --body-color: hsl(250, 60%, 99%);
+    --container-color: #FFF;
+
+    /* Decalring font-family */
+    --body-font-family: 'Poppins', sans-serif;
+
+    /* Decalring font-sizes */
+    /* 1rem = 16px */
+    --big-font-size: 2rem;
+    --medium-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.7rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+
+    /* Decalring font-weight */
+    /* as we have imported google fonts 400, 500 and 600 and set 'Poppins' as the font-family of the body, we can set font weight as 400, 500 and 600 istead of just writing bold or bolder. */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /* Bottom Margins */
+
+    --mb-0-25: 0.25rem;
+    --mb-0-50: 0.50rem;
+    --mb-0-75: 0.75rem;
+    --mb-1-00: 1.00rem;
+    --mb-1-50: 1.50rem;
+    --mb-2-00: 2.00rem;
+    --mb-2-50: 2.50rem;
+    --mb-3-00: 3.00rem;
+
+    /* z-index */
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+}
+
+    /* font-size for larger screen size */
+    
+    @media screen and (min-width: 968px){
+
+        :root{
+            --big-font-size: 3rem;
+            --medium-font-size: 1rem;
+            --small-font-size: 0.875rem;
+            --smaller-font-size: 0.813rem;
+            --h1-font-size: 2.25rem;
+            --h2-font-size: 1.5rem;
+            --h3-font-size: 1.25rem;
+        }
+    }
+
+
