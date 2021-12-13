@@ -205,3 +205,6 @@ a{
     color: var(--color-alt);
 }
 
+.show-menu{
+    bottom: 0;
+}
