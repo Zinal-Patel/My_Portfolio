@@ -72,3 +72,45 @@
     }
 
 
+/* Base  */
+
+/* '*' is a universal selector and the styling is applied to all the elements. Usually used to reset the default styling of the elements */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font-family);
+    font-size:var(--medium-font-size);
+    background-color: var(--body-color);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* Layout */
+
+.container{
+    max-width: 768px;
+    margin-left: var(--mb-1-50);
+    margin-right: var(--mb-1-50);
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
