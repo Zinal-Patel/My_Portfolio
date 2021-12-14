@@ -20,7 +20,7 @@ function linkAction(){
 //HIDE Menu when we click close
 if(navClose){
    
-    navClose.addEventListener('click',linkAction());   
+    navClose.addEventListener('click', linkAction); 
 }
 
 //HIDE Menu when we click on any of the navigation links/menu options
