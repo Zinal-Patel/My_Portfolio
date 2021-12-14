@@ -349,3 +349,43 @@ h1, h2, h3, h4{
     display: inline-flex;
     align-items: center;
 }
+
+/* ABOUT STYLING */
+
+.about-img{
+    width: 200px;
+    border-radius: 0.5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.about-description{
+    text-align: center;
+    margin-bottom: var(--mb-2-50);
+}
+
+.about-info{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2-50);
+}
+.about-info-title{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.about-info-name{
+    font-size: var(--smaller-font-size);
+}
+
+.about-info-title, .about-info-name{
+    display: block;
+    text-align: center;
+
+}
+
+.about-buttons{
+    display: flex;
+    justify-content: center;
+}
