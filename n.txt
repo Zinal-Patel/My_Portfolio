@@ -1,0 +1,33 @@
+/*  reusable css classes */
+
+.section{
+    padding: 2rem 0 4rem;
+    }
+
+.section-title{
+    font-size: var(--h1-font-size);
+}
+
+.section-subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3-00);
+}
+
+.section-title, .section-subtitle{
+    text-align: center;
+}
+
+
+
+img{
+    max-width: 100%;
+    height: auto;
+    /* auto means the height will be as high as the content inside it */
+}
+
+h1, h2, h3, h4{
+
+    color: var(--title-color);
+    font-weight: var(--body-color);
+}
