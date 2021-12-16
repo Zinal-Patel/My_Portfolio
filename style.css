@@ -350,6 +350,20 @@ h1, h2, h3, h4{
     align-items: center;
 }
 
+.button-small{
+    padding: 0.75rem 1rem;
+}
+
+.button-link{
+    padding: 0;
+    background-color: transparent;
+    color: var(--first-color);
+} 
+
+.button-link:hover{
+    background-color: transparent;
+    color: var(--color-alt);
+}
 /* ABOUT STYLING */
 
 .about-img{
@@ -512,4 +526,175 @@ h1, h2, h3, h4{
 
 .skills-open .skills-arrow{
     transform: rotate(-180deg);
+}
+
+/* <!-- QUALIFICATIONS SECTION STARTS --> */
+
+.qualification-tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2-00);
+}
+
+.qualifications-button{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+.qualifications-button:hover{
+    color: var(--first-color);
+}
+
+.qualification-icon{
+    font-size: 1.8rem;
+    margin-right: var(--mb-0-25);
+}
+
+.qualification-data{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.qualification-title{
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-medium);
+}
+
+.qualification-subtitle{
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1-00);
+}
+
+.qualification-calender{
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+.qualification-rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+}
+
+.qualification-line{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--first-color);
+    transform: translate(6px, -7px);
+}
+
+.qualification [data-content]{
+    display: none;
+}
+
+.qualification-active[data-content]{
+    display: block;
+}
+
+.qualifications-button.qualification-active{
+    color: var(--first-color);
+}
+
+/* SERVICES */
+
+.services-container{
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.services-content{
+    position: relative;
+    background-color: var(--container-color);
+    padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.services-content:hover{
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.15);
+}
+
+.services-icon{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    margin-bottom: var(--mb-1-00);
+}
+
+.services-title{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1-00);
+    font-weight: var(--font-medium);
+}
+
+.services-button{
+    cursor: pointer;
+}
+
+.services-button:hover .button-icon{
+    transform: translateX(0.25rem);
+}
+
+.services-modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0; 
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.services-modal-content{
+    position: relative;
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.services-modal-services{
+    row-gap: 1rem;
+}
+
+.services-modal-service-li{
+    display: flex;
+}
+
+.services-modal-title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1-50);
+}
+
+.services-modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    cursor: pointer;
+}
+
+.services-modal-icon{
+    color: var(--first-color);
+    margin-right: var(--mb-0-25);
+}
+
+.active-modal{
+    opacity: 1;
+    visibility: visible;
 }

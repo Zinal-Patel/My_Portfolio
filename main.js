@@ -78,4 +78,63 @@ HTMLElementObject.className = class*/
 /*=============Opening the Skills heading that we click on and closing the rest ends here..================*/
 
 
+const qualificationTabs = document.querySelectorAll('[data-target]');
+//selecting an html element by is attribut name
+const qualificationContents = document.querySelectorAll('[data-content]');
+//selecting an html element by is attribut name
 
+
+
+
+qualificationTabs.forEach(tab => 
+    
+    tab.addEventListener('click', () => {
+
+        const target= document.querySelector(tab.dataset.target);
+
+        //when we click on any of the tab, the class 'qualification-active' will be removed from all the elements of the array qualificationContents
+        qualificationContents.forEach(content => {
+            content.classList.remove('qualification-active')
+        })
+        
+        
+        target.classList.add('qualification-active');
+
+        qualificationTabs.forEach(tab => {
+            tab.classList.remove('qualification-active');
+        })
+
+        tab.classList.add('qualification-active')
+
+
+}));
+
+
+//SERVICES
+
+const modalViews = document.querySelectorAll('.services-modal');
+const modalBtns = document.querySelectorAll('.services-button');
+const modalCloses = document.querySelectorAll('.services-modal-close');
+
+//The 'modalOpen' function adds 'active-modal' class to the item of that 'modalViews' array whose index is passed as the parameter of the funtion
+let modalOpen = function(i){
+    modalViews[i].classList.add('active-modal');
+}
+
+//Adding click event on each button/element of the 'modalBtns' array. On click, the 'modalOpen' function is executed. Whichever button we click on, its index will be passed as the parameter of the 'modalOpen' function. So respective modalView opens up.
+modalBtns.forEach((modalBtn, i)=>{
+    modalBtn.addEventListener('click', ()=>{
+        modalOpen(i);
+    })
+})
+
+//The 'modalClose' function removes 'active-modal' class from all the items of the 'modalViews' array.
+let modalClose = function(){
+
+    modalViews.forEach(modalView => {
+        modalView.classList.remove('active-modal');
+    })
+}
+
+//Adding click event on each element of the 'modalCloses' array. On click, the 'modalClose' function is executed. No matter what close button we click on, all the modalView will be closed.
+modalCloses.forEach((modalCls) => modalCls.addEventListener('click', modalClose ))
