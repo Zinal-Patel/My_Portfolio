@@ -138,3 +138,20 @@ let modalClose = function(){
 
 //Adding click event on each element of the 'modalCloses' array. On click, the 'modalClose' function is executed. No matter what close button we click on, all the modalView will be closed.
 modalCloses.forEach((modalCls) => modalCls.addEventListener('click', modalClose ))
+
+
+/*SWIPER */
+
+let swiper = new Swiper(".mySwiper", {
+    cssMode: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+     
+  });

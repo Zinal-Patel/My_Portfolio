@@ -4,9 +4,15 @@
 
     <title>Personal Portfolio Website</title>
 
+    <!-- our css sheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- UNICONS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- swiper js is a library to create rotating slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="swiper-bundle.min.css"> -->
+
 
 </head>
 <body>
@@ -496,7 +502,6 @@
                 </div>
             </div>
         </section>
-
         <!-- QUALIFICATIONS SECTION ENDS -->
 
         <!-- SERVICES SECTION STARTS -->
@@ -624,13 +629,78 @@
         <!-- SERVICES SECTION ENDS -->
 
         <!-- PORTFOLIO SECTION STARTS -->
+        <section class="porfolio section" id="portfolio">
+            <h2 class="section-title">PORTFOLIO</h2>
+            <span class="section-subtitle">Most Recent Work</span>
+
+            <div class="portfolio-container container swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- PORTFOLIO--- 1.0 -->
+                    <div class="portfolio-content grid swiper-slide">
+                        <img src="img/portfolio1.jpg" alt="" class="portfolio-img">
+
+                        <div class="portfolio-data">
+                            <h3 class="portfolio-title">Modern Website</h3>
+                            <p class="portfolio-description">Website Adaptable to all devices, with ui components and animated interactions</p>
+                            <a href="#" class="button-flex button-small button portfolio-button">
+                                Demo
+                                <i class="uil uil-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PORTFOLIO--- 2.0 -->
+                    <div class="portfolio-content grid swiper-slide">
+                        <img src="img/portfolio2.jpg" alt="" class="portfolio-img">
+
+                        <div class="portfolio-data">
+                            <h3 class="portfolio-title">Brand Design</h3>
+                            <p class="portfolio-description">Website Adaptable to all devices, with ui components and animated interactions</p>
+                            <a href="#" class="button-flex button-small button portfolio-button">
+                                Demo
+                                <i class="uil uil-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PORTFOLIO--- 3.0 -->
+                    <div class="portfolio-content grid swiper-slide">
+                        <img src="img/portfolio3.jpg" alt="" class="portfolio-img">
+
+                        <div class="portfolio-data">
+                            <h3 class="portfolio-title">Online Store</h3>
+                            <p class="portfolio-description">Website Adaptable to all devices, with ui components and animated interactions</p>
+                            <a href="#" class="button-flex button-small button portfolio-button">
+                                Demo
+                                <i class="uil uil-arrow-right button-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ADDING ARROWS -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+                <!-- ADD PAGINATION -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
         <!-- PORTFOLIO SECTION ENDS  -->
+
 
     </main>
     <!-- MAIN Ends -->
-'
 
-'
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- <script src="swiper-bundle.min.js" type="text/javascript"></script> -->
     <script src="Main.js" type="text/javascript"></script>
 </body>
 </html>
