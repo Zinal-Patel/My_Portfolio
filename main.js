@@ -1,8 +1,8 @@
 /*=============Show menu when we click on toggle icon and close when clicked on close icon starts here...================*/
 
-const navMenu = document.querySelector("#nav-menu-id");
-const navToggle = document.querySelector("#nav-toggle-id");
-const navClose = document.querySelector("#nav-close-id");
+const navMenu = document.querySelector("#nav-menu");
+const navToggle = document.querySelector("#nav-toggle");
+const navClose = document.querySelector("#nav-close");
 
 //SHOW Menu
 if(navToggle){
@@ -12,22 +12,22 @@ if(navToggle){
     })    
 }
 
-function linkAction(){
+function removeMenu(){
     navMenu.classList.remove('show-menu');
 }
 
 //HIDE Menu when we click close
 if(navClose){
    
-    navClose.addEventListener('click', linkAction); 
+    navClose.addEventListener('click', removeMenu); 
 }
 
 //HIDE Menu when we click on any of the navigation links/menu options
 
 
-const navLink = document.querySelectorAll(".nav-link");
+const navLinks = document.querySelectorAll(".nav-link");
 
-navLink.forEach(n => n.addEventListener('click', linkAction));
+navLinks.forEach(n => n.addEventListener('click', removeMenu));
 //array.forEach(element => console.log(element));
 
 /*=============Show menu when we click on toggle icon and close when clicked on close icon ends here...================*/
@@ -140,9 +140,9 @@ let modalClose = function(){
 modalCloses.forEach((modalCls) => modalCls.addEventListener('click', modalClose ))
 
 
-/*SWIPER */
+/*SWIPER Portfolio*/
 
-let swiper = new Swiper(".mySwiper", {
+let swiperPortfolio = new Swiper(".portfolio-container", {
     cssMode: true,
     loop: true,
     navigation: {
@@ -155,3 +155,86 @@ let swiper = new Swiper(".mySwiper", {
     },
      
   });
+
+/* SWIPER Testimonial*/
+
+  let swiperTestimonial = new Swiper(".testimonial-container", {
+    loop: true,
+    grabCursor: true, 
+    spaceBetween: 48, 
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+     breakpoints:{
+         568:{
+             slidesPerView: 2,
+         }
+     }
+  });
+
+  /* Scroll section active */
+
+const navLink = document.querySelectorAll('.nav__link')
+
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu')
+    // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+
+    const scrollY = window.pageYOffset
+
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        var sectionId = current.getAttribute('id')
+
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
+
+        }else{
+
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
+
+         
+        }
+    })
+}
+
+window.addEventListener('scroll', scrollActive)
+
+
+/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+function scrollHeader(){
+    const nav = document.getElementById('header')
+    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+    if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
+
+/*==================== SHOW SCROLL TOP ====================*/ 
+function scrollUp(){
+    const scrollY = window.pageYOffset
+
+    const scrollUpArrow = document.querySelector('#scroll-up');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 560){
+     scrollUpArrow.classList.add('show-scroll');
+    }
+
+    else {
+          scrollUpArrow.classList.remove('show-scroll')
+      }
+}
+window.addEventListener('scroll', scrollUp)

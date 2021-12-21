@@ -70,7 +70,7 @@
             --h3-font-size: 1.25rem;
         }
     }
-
+/* Button dark light */
 
 /* Base  */
 
@@ -228,6 +228,10 @@ a{
     bottom: 0;
 }
 
+.active-link{
+    color: var(--first-color);
+}
+
 img{
     max-width: 100%;
     height: auto;
@@ -343,6 +347,7 @@ h1, h2, h3, h4{
     font-size: 1.25rem;
     margin-left: var(--mb-0-50);
     transition: 0.5s;
+    
 }
 
 .button-flex{
@@ -363,6 +368,15 @@ h1, h2, h3, h4{
 .button-link:hover{
     background-color: transparent;
     color: var(--color-alt);
+}
+
+.button-white{
+    background-color: #FFF;
+    color: var(--first-color);
+}
+
+.button-white:hover{
+    background-color: #FFF;
 }
 /* ABOUT STYLING */
 
@@ -758,4 +772,214 @@ h1, h2, h3, h4{
 
 .swiper-button-prev,.swiper-button-next, .swiper-pagination-bullet{
     outline: none;
+}
+
+/* Project in mind */
+
+.project{
+    text-align: center;
+}
+
+.project-bg{
+    background-color: var(--first-color);
+    padding-top: 3rem;
+}
+
+.project-title{
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.project-description{
+    margin-bottom: var(--mb-1-50);
+}
+
+.project-title, .project-description{
+    color: #FFF;
+}
+
+.project-img{
+    width: 232px;
+    justify-self: center;
+}
+
+/* TESTIMONIALS */
+
+.testimonial-data, .testimonial-header{
+    display: flex;
+}
+
+.testimonial-data{
+    justify-content: space-between;
+    margin-bottom: var(--mb-1-00);
+}
+
+.testimonial-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: var(--mb-0-75);
+}
+
+.testimonial-name{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.testimonial-client{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.testimonial-description{
+    margin-bottom: var(--mb-2-50);
+}
+
+.testimonial-icon-star{
+    color: var(--first-color);
+}
+
+/* swiper testimonials */
+
+.swiper-container .swiper-pagination-testimonial{
+    bottom:0;
+}
+
+/* Contact ME */
+
+.contact-container{
+    row-gap: 3rem;
+}
+
+.contact-information{
+    display: flex;
+    margin-bottom: var(--mb-2-00);
+}
+
+.contact-icon{
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+}
+
+.contact-title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.contact-subtitle{
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+
+.contact-content{
+        background-color: var(--input-color);
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem 0.25rem;
+}
+
+.contact-label{
+    font-size: var(--smaller-font-size);
+    color: var(--title-color);
+}
+.contact-input{
+    width: 100%;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    font-family: var(--body-font-family);
+    font-size: var(--medium-font-size);
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+}
+
+/* FOOTER */
+
+.footer{
+    padding-top: 2rem;
+}
+
+.footer-container{
+    row-gap: 3.5rem;
+}
+
+.footer-bg{
+    background-color: var(--second-color);
+    padding: 2rem 0rem 3rem;
+}
+
+.footer-title{
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.footer-subtitle{
+    font-size: var(--small-font-size);
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.footer-link:hover{
+    color: var(--color-lighter);
+}
+
+
+.footer-social{
+    font-size: 1.25rem;
+    margin-right: var(--mb-1-50);
+}
+
+.footer-social:hover{
+    color: var(--color-lighter);
+}
+
+.footer-copy{
+    font-size: var(--smaller-font-size);
+    text-align: center;
+    color: var(--text-color-light);
+    margin-top: var(--mb-3-00);
+}
+
+.footer-title, 
+.footer-subtitle, 
+.footer-link,
+.footer-social{
+    color: #FFF;
+}
+
+/* Scroll section active */
+
+/* change ackground header */
+
+.scroll-header{
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-up{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--first-color);
+    opacity: 0.8;
+    padding: 0 0.3rem;
+    border-radius: 0.4rem;
+    z-index: var(--z-tooltip);
+    transition: 0.4s;
+}
+
+.scroll-up:hover{
+    background-color: var(--color-alt);
+}
+
+.scroll-up-icon{
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.show-scroll{
+    bottom:5rem;
 }
