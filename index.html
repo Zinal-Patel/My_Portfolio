@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Personal Portfolio Website</title>
 
     <!-- our css sheet -->
@@ -59,7 +62,8 @@
             </div>
 
             <div class="nav-btns">
-               
+                <!-- DARK/LIGHT MODE CHANGE BUTTON -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
 
                 <div class="nav-toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
@@ -111,7 +115,7 @@
                         <h1 class="home-title">Hi, I am Alexa.</h1>
                         <h3 class="home-subtitle">Full Stack Developer</h3>
                         <p class="home-description">High level experience and knowledge in web desinging and development, producing quality work.</p>
-                        <a href="#Contact" class="button button-flex">
+                        <a href="#contact" class="button button-flex">
                             ContactME<i class="uil uil-message button-icon"></i>
                         </a>
                     </div>
@@ -134,7 +138,7 @@
             <h1 class="section-title">ABOUT ME</h1>
             <span class="section-subtitle">My Introduction</span>
             <div class="about-container container grid">
-                <img src="img/about.jpg" alt="" class="about-image">
+                <img src="img/about.jpg" alt="" class="about-img">
                 <div class="about-data">
                     <p class="about-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled i</p>
 
@@ -146,7 +150,8 @@
                         <div>
                             <span class="about-info-title">04+</span>
                             <span class="about-info-name">Completed <br> Projects</span>
-                        </div><div>
+                        </div>
+                        <div>
                             <span class="about-info-title">05+</span>
                             <span class="about-info-name">Companies <br> Worked</span>
                         </div>
@@ -168,7 +173,7 @@
             <span class="section-subtitle">My Technical Level</span>
 
             <div class="skills-container container grid">
-                <div>
+                <!--there is a styling issue uncomment it --> <!-- <div> --> 
                     <!-- skills-1.0 -->
                     <div class="skills-content skills-open">
                         <div class="skills-header">
@@ -331,7 +336,7 @@
                         
                     </div>
 
-                </div>
+                <!-- </div> -->
             </div>
         </section>
         <!-- SKILLS SECTION ENDS -->
@@ -802,11 +807,11 @@
         <!-- TESTIMONIALS ENDS -->
 
         <!-- CONTACT ME STARTS -->
-        <section class="contact section" id="contact">
+        <section class="contact section" id="contact">   
             <h2 class="section-title">CONTACT ME</h2>
             <span class="section-subtitle">Get In Touch</span>
 
-            <div class="contat-container container grid">
+            <div class="contact-container container grid">
                 <div>
                     <!-- CONTACT--1.0 -->
                     <div class="contact-information">
@@ -828,7 +833,7 @@
                         </div>
                     </div>
                     
-                    <!-- CONTACT--1.0 -->
+                    <!-- CONTACT--3.0 -->
                     <div class="contact-information">
                         <i class="uil uil-map-marker contact-icon"></i>
 
@@ -868,9 +873,7 @@
                 </form>
             </div>
         </section>
-        <!-- CONTACT ME STARTS -->
-
-      
+        <!-- CONTACT ME ENDS -->
 
     </main>
 
@@ -895,7 +898,7 @@
                     </li> 
                     
                     <li>
-                        <a href="#Contact" class="footer-link">ContactMe</a>
+                        <a href="#contact" class="footer-link">ContactMe</a>
                     </li>
                 </ul>
 
